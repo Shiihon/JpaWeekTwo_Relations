@@ -29,7 +29,7 @@ public class Main {
             p1.addEvent(e1);
             p1.addEvent(e2);
             em.persist(e1);
-            em.persist(e2);
+            em.persist(e2); // kan også lave en cascade persist inde i event klassen, istedet for at persiste herinde.
 
             em.getTransaction().begin();
             em.persist(p1);
