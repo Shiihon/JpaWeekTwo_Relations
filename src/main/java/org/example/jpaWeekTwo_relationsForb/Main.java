@@ -24,6 +24,13 @@ public class Main {
             p1.addFee(f1);
             p1.addFee(f2);
 
+            Event e1 = new Event("DM Senior", LocalDate.now());
+            Event e2 = new Event("Sjællands mesterskaber", LocalDate.of(2024, 01, 10));
+            p1.addEvent(e1);
+            p1.addEvent(e2);
+            em.persist(e1);
+            em.persist(e2);
+
             em.getTransaction().begin();
             em.persist(p1);
             em.getTransaction().commit();

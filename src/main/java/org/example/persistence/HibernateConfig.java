@@ -1,6 +1,7 @@
 package org.example.persistence;
 
 import jakarta.persistence.EntityManagerFactory;
+import org.example.jpaWeekTwo_relationsForb.Event;
 import org.example.jpaWeekTwo_relationsForb.Fee;
 import org.example.jpaWeekTwo_relationsForb.Person;
 import org.example.jpaWeekTwo_relationsForb.PersonDetail;
@@ -48,6 +49,7 @@ public class HibernateConfig {
         configuration.addAnnotatedClass(Person.class);
         configuration.addAnnotatedClass(PersonDetail.class);
         configuration.addAnnotatedClass(Fee.class);
+        configuration.addAnnotatedClass(Event.class);
     }
 
     private static EntityManagerFactory createEMF(boolean forTest) {

@@ -32,6 +32,15 @@ public class Person {
     @OneToMany(mappedBy = "person", cascade = CascadeType.ALL)
     private Set<Fee> fees = new HashSet<>();
 
+    //relationer M:M
+    @ManyToMany
+    private Set<Event> events = new HashSet<>();
+
+    //Uni-directional
+    public void addEvent(Event event) {
+        this.events.add(event);
+    }
+
     //bi-directional update - peger den modsatte vej.
 
     //man fortæller at den skal sættes på oppe ved persondetail attributten. Så værdien er blevet sat.
